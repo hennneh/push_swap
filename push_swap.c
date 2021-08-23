@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "push_swap.h"
 
 static int	create_stack(int argc, char **argv, int *stack_a)
 {
@@ -16,7 +17,7 @@ static int	create_stack(int argc, char **argv, int *stack_a)
 			j++;
 		}
 		else
-			return (-1);
+			return (0);
 	}
 	return (i - 1);
 }
@@ -26,8 +27,7 @@ int	main(int argc, char **argv)
 	int	len;
 	int	stack_a[argc - 1];
 	int stack_b[argc - 1];
-	len = create_stack(argc, argv, stack_a);
-	printf("arg_count: %d\n", len);
-	printf("stack[0]: %d\n", stack_a[0]);
+	if (!(len = create_stack(argc, argv, stack_a)))
+		write(1, "Error\n", 6);
 	return (0);
 }
