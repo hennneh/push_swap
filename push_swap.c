@@ -1,7 +1,20 @@
 #include <stdio.h>
 #include "push_swap.h"
 
-int	check_input(int argc, char **argv)
+int	is_double(int argc, char **argv)
+{
+	int	i;
+	int	j;
+
+	i = 1;
+	while (i < argc)
+	{
+		j = 0;
+		while (argv[i][j] != 
+	}
+}
+
+int	is_digit(int argc, char **argv)
 {
 	int	i;
 	int	j;
@@ -21,6 +34,7 @@ int	check_input(int argc, char **argv)
 		}
 		i++;
 	}
+	return (0);
 }
 
 static int	create_stack(int argc, char **argv, int *stack_a)
