@@ -1,6 +1,28 @@
 #include <stdio.h>
 #include "push_swap.h"
 
+int	pre_sort(int *stack_a, int *stack_c, int argc)
+{
+	int	i;
+	int	j;
+	int	temp;
+}
+
+void	fill_stack(int argc, char **argv, int *stack_a, int *stack_c)
+{
+	int	i;
+	int	j;
+
+	i = 1;
+	j = 0;
+	while (i < argc)
+	{
+		stack_c[j] = atoi(argv[i]);
+		i++;
+		j++;
+	}
+}
+
 int	is_digit(int argc, char **argv)
 {
 	int	i;
@@ -31,7 +53,8 @@ int	checks(int argc, char **argv, int *stack_a, int *stack_c)
 	valid = is_digit(argc, argv);
 	if (valid < 0)
 		return (-1);
-
+	fill_stack(argc, argv, stack_a, stack_c);
+	pre_sort(stack_a, stack_c, argc);
 }
 
 int	main(int argc, char **argv)
