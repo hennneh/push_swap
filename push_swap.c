@@ -1,19 +1,6 @@
 #include <stdio.h>
 #include "push_swap.h"
 
-int	is_double(int argc, char **argv)
-{
-	int	i;
-	int	j;
-
-	i = 1;
-	while (i < argc)
-	{
-		j = 0;
-		while (argv[i][j] != 
-	}
-}
-
 int	is_digit(int argc, char **argv)
 {
 	int	i;
@@ -37,29 +24,25 @@ int	is_digit(int argc, char **argv)
 	return (0);
 }
 
-static int	create_stack(int argc, char **argv, int *stack_a)
+int	checks(int argc, char **argv, int *stack_a, int *stack_c)
 {
-	int	*sort;
-	int	i;
-	int	j;
+	int	valid;
 
-	i = 0;
-	sort = malloc(sizeof(int) * (argc - 1));
-	while (i < argc - 1)
-	{
-		j = ft_atoi(argv[i + 1];
-		sort[i] = ft_atoi(argv[i + 1];
-		
-	}
+	valid = is_digit(argc, argv);
+	if (valid < 0)
+		return (-1);
+
 }
 
 int	main(int argc, char **argv)
 {
 	int	*stack_a;
 	int	*stack_b;
+	int	*stack_c;
 
 	stack_a = malloc(sizeof(int) * (argc - 1));
 	stack_b = malloc(sizeof(int) * (argc - 1));
-	create_stack(argc, argv, stack_a);
+	stack_c = malloc(sizeof(int) * (argc - 1));
+	checks(argc, argv, stack_a, stack_c);
 	return (0);
 }
