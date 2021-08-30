@@ -6,6 +6,23 @@ int	pre_sort(int *stack_a, int *stack_c, int argc)
 	int	i;
 	int	j;
 	int	temp;
+
+	i = 0;
+	while (i < argc - 2)
+	{
+		j = i + 1;
+		while (stack_c[i] < stack_c[j] && j < (argc - 1))
+			j++;
+		if (stack_c[i] > stack_c[j])
+		{
+			temp = stack_c[j];
+			stack_c[j] = stack_c[i];
+			stack_c[i] = temp;
+			i = 0;
+		}
+		else
+			i++;
+	}
 }
 
 void	fill_stack(int argc, char **argv, int *stack_a, int *stack_c)
