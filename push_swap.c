@@ -1,6 +1,22 @@
 #include <stdio.h>
 #include "push_swap.h"
 
+int	check_dup(int argc, int *stack_c)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < argc - 1)
+	{
+		j = i + 1;
+		if (stack_c[i] == stack_c[j])
+			return (-1);
+		i++;
+	}
+	return (0);
+}
+
 int	pre_sort(int *stack_a, int *stack_c, int argc)
 {
 	int	i;
@@ -23,6 +39,9 @@ int	pre_sort(int *stack_a, int *stack_c, int argc)
 		else
 			i++;
 	}
+	temp = check_dup(argc, stack_c);
+	if (temp == -1)
+		return (-1);
 }
 
 void	fill_stack(int argc, char **argv, int *stack_a, int *stack_c)
