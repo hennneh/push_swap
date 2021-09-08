@@ -1,6 +1,21 @@
 #include <stdio.h>
 #include "push_swap.h"
 
+int	check_max_int(int argc, char **argv)
+{
+	int	i;
+	int	j;
+	int	len;
+
+	i = 1;
+	while (i <= argc)
+	{
+		len = ft_strlen(argv[i]);
+		if (len > 12)
+			return (-1);
+	}
+}
+
 int	check_dup(int argc, int *stack_c)
 {
 	int	i;
