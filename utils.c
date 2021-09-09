@@ -24,3 +24,8 @@ int	ft_atoi(const char *nptr)
 	}
 	return (num * sign);
 }
+
+void	ft_putchar_fd(char s, int fd)
+{
+	write (fd, &s, 1);
+}
