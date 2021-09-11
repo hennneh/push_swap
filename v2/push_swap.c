@@ -40,6 +40,8 @@ int	ft_is_int(int argc, char **argv)
 		j = 0;
 		if (ft_strlen(argv[i] > 11))
 			return (0);
+		if (ft_strlen(argv[i] == 11 && argv[i][0] != '-'))
+			return (0);
 											// finish input check for ints
 	}
 	return (1);
