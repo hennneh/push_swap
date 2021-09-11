@@ -42,6 +42,9 @@ int	ft_is_int(int argc, char **argv)
 			return (0);
 		if (ft_strlen(argv[i] == 11 && argv[i][0] != '-'))
 			return (0);
+		else if (!ft_neg_input(argv[i]))
+			return (0);
+											// add ft_neg_input
 											// finish input check for ints
 	}
 	return (1);
