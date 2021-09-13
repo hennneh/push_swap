@@ -30,6 +30,11 @@ int	ft_error_msg(void)
 	return (0);
 }
 
+int	ft_neg_input(*s)
+{
+	long	nbr;
+}
+
 int	ft_is_int(int argc, char **argv)
 {
 	int	i;
