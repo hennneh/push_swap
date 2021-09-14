@@ -33,6 +33,11 @@ int	ft_error_msg(void)
 int	ft_neg_input(*s)
 {
 	long	nbr;
+
+	nbr = ft_atol(*s);
+	if (nbr < -2147483648)
+		return (0);
+	return (1);
 }
 
 int	ft_is_int(int argc, char **argv)
@@ -51,6 +56,7 @@ int	ft_is_int(int argc, char **argv)
 			return (0);
 											// add ft_neg_input
 											// finish input check for ints
+											// add ft_atol
 	}
 	return (1);
 }
