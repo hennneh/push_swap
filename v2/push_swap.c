@@ -24,6 +24,31 @@ int	ft_strlen(char *s)
 	return (i);
 }
 
+int	ft_atol(*s)
+{
+	size_t	i;
+	long	sign;
+	long	num;
+
+	i = 0;
+	sign = 1;
+	num = 0;
+	while ((s[i] > 8 && s[i] < 14) || s[i] == 32)
+		i++;
+	if (s[i] == 43 || s[i] == 45)
+	{
+		if (s[i] == 45)
+			sign *= -1;
+		i++;
+	}
+	while (s[i] > 47 && s[i] < 58)
+	{
+		num = num * 10 + s[i] - '0';
+		i++;
+	}
+	return (num * sign);
+}
+
 int	ft_error_msg(void)
 {
 	ft_putstr_fd("Error\n", 2);
@@ -56,7 +81,6 @@ int	ft_is_int(int argc, char **argv)
 			return (0);
 											// add ft_neg_input
 											// finish input check for ints
-											// add ft_atol
 	}
 	return (1);
 }
