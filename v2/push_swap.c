@@ -85,9 +85,58 @@ int	ft_is_int(int argc, char **argv)
 	return (1);
 }
 
+void	ft_rearrange(int *array, int i, int j)
+{
+	int	temp;
+
+	while (i != j)
+	{
+		temp = array[j - 1];
+		array[j - 1] = array[j];
+		array[j] = temp;
+		j--;
+	}
+}
+
+int	ft_check_double(int *array, int argc)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < argc - 1)
+	{
+		j = i + 1;
+		while (array[i] < array[j] && j < argc - 1)
+			j++;
+		if (array[i] == array[j])
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
 int	ft_sort(int *array, int argc)
 {
-	//add stuff here plz
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < argc - 1)
+	{
+		j = i + 1;
+		while (i < j)
+			j++;
+		i++;
+		if (array[i - 1] > array[j])
+		{
+			ft_rearrange(array, i, j);
+			i = 0;
+		}
+	}
+	if (!ft_check_double(array, argc))
+		return (0);
+	return (1);
 }
 
 int	ft_presort(int *array, int argc, char **argv)
