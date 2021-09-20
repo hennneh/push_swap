@@ -1,10 +1,38 @@
 #include "push_swap.h"
 #include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+int	ft_atoi(const char *nptr)
+{
+	size_t	i;
+	int		sign;
+	int		num;
+
+	i = 0;
+	sign = 1;
+	num = 0;
+	while ((nptr[i] > 8 && nptr[i] < 14) || nptr[i] == 32)
+		i++;
+	if (nptr[i] == 43 || nptr[i] == 45)
+	{
+		if (nptr[i] == 45)
+			sign *= -1;
+		i++;
+	}
+	while (nptr[i] > 47 && nptr[i] < 58)
+	{
+		num = num * 10 + nptr[i] - '0';
+		i++;
+	}
+	return (num * sign);
+}
 
 void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
+	i = 0;
 	if (s == NULL)
 		return ;
 	while (s[i])
@@ -59,7 +87,7 @@ int	ft_neg_input(char *s)
 {
 	long	nbr;
 
-	nbr = ft_atol(*s);
+	nbr = ft_atol(s);
 	if (nbr < -2147483648)
 		return (0);
 	return (1);
@@ -72,15 +100,15 @@ int	ft_is_int(int argc, char **argv)
 	i = 1;
 	while (i < argc)
 	{
-		j = 0;
-		if (ft_strlen(argv[i] > 11))
+		if (ft_strlen(argv[i]) > 11)
 			return (0);
-		if (ft_strlen(argv[i] == 11 && argv[i][0] != '-'))
+		if (ft_strlen(argv[i]) == 11 && argv[i][0] != '-')
 			return (0);
 		else if (!ft_neg_input(argv[i]))
 			return (0);
 		if (ft_strlen(argv[i]) == 10 && ft_atol(argv[i]) > 2147482647)
 			return (0);
+		i++;
 	}
 	return (1);
 }
@@ -157,13 +185,19 @@ int	ft_presort(int *array, int argc, char **argv)
 
 int	ft_init(int argc, char **argv)
 {
-	int	*presort;
+	int	*array;
 
 	if (!ft_is_int(argc, argv))
 		return (0);
-	presort = malloc(argc - 1, sizeof(int));
-	if (!ft_presort(presort, argc, argv))
+	array = malloc(argc - 1 * sizeof(int));
+	if (!ft_presort(array, argc, argv))
 		return (0);
+	int i = 0;
+	while (i < argc - 1)
+	{
+		printf("%d\n", array[i]);
+		i++;
+	}
 	return (1);
 }
 
