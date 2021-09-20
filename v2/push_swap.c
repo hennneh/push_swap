@@ -104,10 +104,10 @@ int	ft_is_int(int argc, char **argv)
 			return (0);
 		if (ft_strlen(argv[i]) == 11 && argv[i][0] != '-')
 			return (0);
-		else if (!ft_neg_input(argv[i]))
+/*		else if (!ft_neg_input(argv[i]))
 			return (0);
 		if (ft_strlen(argv[i]) == 10 && ft_atol(argv[i]) > 2147482647)
-			return (0);
+			return (0);*/
 		i++;
 	}
 	return (1);
@@ -187,6 +187,8 @@ int	ft_init(int argc, char **argv)
 {
 	int	*array;
 
+	if (argc < 2)
+		return (0);
 	if (!ft_is_int(argc, argv))
 		return (0);
 	array = malloc(argc - 1 * sizeof(int));
