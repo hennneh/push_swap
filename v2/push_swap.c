@@ -24,7 +24,7 @@ int	ft_strlen(char *s)
 	return (i);
 }
 
-int	ft_atol(*s)
+int	ft_atol(char *s)
 {
 	size_t	i;
 	long	sign;
@@ -55,7 +55,7 @@ int	ft_error_msg(void)
 	return (0);
 }
 
-int	ft_neg_input(*s)
+int	ft_neg_input(char *s)
 {
 	long	nbr;
 
@@ -104,14 +104,15 @@ int	ft_check_double(int *array, int argc)
 	int	j;
 
 	i = 0;
-	while (i < argc - 1)
+	j = i + 1;
+	while (j < argc - 1)
 	{
-		j = i + 1;
 		while (array[i] < array[j] && j < argc - 1)
 			j++;
 		if (array[i] == array[j])
 			return (0);
 		i++;
+		j = i + 1;
 	}
 	return (1);
 }
