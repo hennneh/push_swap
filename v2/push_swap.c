@@ -79,15 +79,40 @@ int	ft_is_int(int argc, char **argv)
 			return (0);
 		else if (!ft_neg_input(argv[i]))
 			return (0);
-											// add ft_neg_input
-											// finish input check for ints
+		if (ft_strlen(argv[i]) == 10 && ft_atol(argv[i]) > 2147482647)
+			return (0);
 	}
+	return (1);
+}
+
+int	ft_sort(int *array, int argc)
+{
+	//add stuff here plz
+}
+
+int	ft_presort(int *array, int argc, char **argv)
+{
+	int	i;
+
+	i = 0;
+	while (i < argc - 1)
+	{
+		array[i] = ft_atoi(argv[i + 1]);
+		i++;
+	}
+	if (!ft_sort(array, argc))
+		return (0);
 	return (1);
 }
 
 int	ft_init(int argc, char **argv)
 {
+	int	*presort;
+
 	if (!ft_is_int(argc, argv))
+		return (0);
+	presort = malloc(argc - 1, sizeof(int));
+	if (!ft_presort(presort, argc, argv))
 		return (0);
 	return (1);
 }
