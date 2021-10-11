@@ -14,7 +14,8 @@ typedef struct	s_stacks
 	int	pos_b;
 }				t_stacks;
 
-int	ft_error(void);
-int	ft_isnum(int argc, char **argv);
+int		ft_error(t_stacks stacks);
+int		ft_isnum(int argc, char **argv);
+void	ft_free(t_stacks stacks);
 
 #endif

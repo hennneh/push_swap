@@ -13,7 +13,10 @@ int	main(int argc, char **argv)
 	t_stacks	stacks;
 
 	stacks.stack_a = malloc(sizeof(int) * (argc - 1));
+	stacks.stack_b = malloc(sizeof(int) * (argc - 1));
+	stacks.stack_c = malloc(sizeof(int) * (argc - 1));
 	if (ft_init(argc, argv, stacks))
-		return (ft_error());
+		return (ft_error(stacks));
+	ft_free(stacks);
 	return (0);
 }

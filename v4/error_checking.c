@@ -1,8 +1,16 @@
 #include "push_swap.h"
 
-int	ft_error(void)
+void	ft_free(t_stacks stacks)
+{
+	free(stacks.stack_a);
+	free(stacks.stack_b);
+	free(stacks.stack_c);
+}
+
+int	ft_error(t_stacks stacks)
 {
 	write(2, "Error\n", 6);
+	ft_free(stacks);
 	return (1);
 }
 
