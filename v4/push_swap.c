@@ -12,7 +12,7 @@ int	main(int argc, char **argv)
 {
 	t_stacks	stacks;
 
-	stacks.pos_a = 2;
+	stacks.stack_a = malloc(sizeof(int) * (argc - 1));
 	if (ft_init(argc, argv, stacks))
 		return (ft_error());
 	return (0);
