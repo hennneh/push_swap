@@ -17,5 +17,6 @@ typedef struct	s_stacks
 int		ft_error(t_stacks stacks);
 int		ft_isnum(int argc, char **argv);
 void	ft_free(t_stacks stacks);
+long	ft_atol(char *s);
 
 #endif
