@@ -23,6 +23,8 @@ int	ft_isnum(int argc, char **argv)
 	while (i < argc)
 	{
 		j = 0;
+		if (argv[i][j] == '-')
+			j++;
 		while (argv[i][j] && argv[i][j] > 47 && argv[i][j] < 58)
 			j++;
 		if (argv[i][j - 1] > 57 || argv[i][j - 1] < 48)
