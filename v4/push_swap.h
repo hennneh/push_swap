@@ -5,14 +5,14 @@
 # include <stdio.h>
 # include <stdlib.h>
 
-typedef struct	s_stacks
+typedef struct s_stacks
 {
 	int	*stack_a;
 	int	*stack_b;
 	int	*stack_c;
 	int	pos_a;
 	int	pos_b;
-}				t_stacks;
+}		t_stacks;
 
 int		ft_error(t_stacks stacks);
 int		ft_isnum(int argc, char **argv);
