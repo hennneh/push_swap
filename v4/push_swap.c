@@ -18,7 +18,6 @@ int	main(int argc, char **argv)
 	stacks.stack_c = malloc(sizeof(int) * (argc - 1));
 	ptr_stacks = &stacks;
 	if (ft_init(argc, argv, ptr_stacks))
-		return (ft_error(stacks));
-	ft_free(stacks);
+		return (ft_error(ptr_stacks));
 	return (0);
 }
