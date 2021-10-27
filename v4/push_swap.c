@@ -4,7 +4,7 @@ static int	ft_init(int argc, char **argv, t_stacks *ptr_stacks)
 {
 	if (ft_isnum(argc, argv))
 		return (1);
-	stacks.pos_a = 1;
+	ptr_stacks->pos_a = 1;
 	return (0);
 }
 

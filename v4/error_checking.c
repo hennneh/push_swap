@@ -22,7 +22,7 @@ int	ft_isint(int argc, char **argv)
 	i = 1;
 	while (i < argc)
 	{
-		if (ft_strlen(argv[i]) > 12)
+		if (ft_strlen(argv[i]) > 11)
 			return (1);
 		if (ft_strlen(argv[i]) == 11 && argv[i][0] != '-')
 			return (1);
@@ -31,6 +31,7 @@ int	ft_isint(int argc, char **argv)
 			return (1);
 		return (0);
 	}
+	return (0);
 }
 
 int	ft_isnum(int argc, char **argv)
@@ -54,6 +55,6 @@ int	ft_isnum(int argc, char **argv)
 		i++;
 	}
 	if (ft_isint(argc, argv))
-		return (1)
+		return (1);
 	return (0);
 }
