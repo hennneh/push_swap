@@ -15,12 +15,17 @@ int	main(int argc, char **argv)
 	t_stacks	stacks;
 	t_stacks	*ptr_stacks;
 
-	stacks.stack_a = malloc(sizeof(int) * (argc - 1));
-	stacks.stack_b = malloc(sizeof(int) * (argc - 1));
-	stacks.stack_c = malloc(sizeof(int) * (argc - 1));
 	ptr_stacks = &stacks;
+	ptr_stacks->stack_a = malloc(sizeof(int) * (argc - 1));
+	ptr_stacks->stack_b = malloc(sizeof(int) * (argc - 1));
+	ptr_stacks->stack_c = malloc(sizeof(int) * (argc - 1));
 	if (ft_init(argc, argv, ptr_stacks))
 		return (ft_error(ptr_stacks));
+	if (argc < 3)
+	{
+		ft_free(ptr_stacks);
+		return (0);
+	}
 	ft_free(ptr_stacks);
 	return (0);
 }
