@@ -21,6 +21,13 @@ int	main(int argc, char **argv)
 	ptr_stacks->stack_c = malloc(sizeof(int) * (argc - 1));
 	if (ft_init(argc, argv, ptr_stacks))
 		return (ft_error(ptr_stacks));
+// testing output
+	int i = 0;
+	while (i < (argc - 1))
+	{
+		printf("%d\n", ptr_stacks->stack_c[i]);
+		i++;
+	}
 	if (argc < 3)
 	{
 		ft_free(ptr_stacks);
