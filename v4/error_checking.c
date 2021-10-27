@@ -14,7 +14,7 @@ int	ft_error(t_stacks *ptr_stacks)
 	return (1);
 }
 
-int	ft_isint(int argc, char **argv)
+static int	ft_isint(int argc, char **argv)
 {
 	long	nbr;
 	int		i;
