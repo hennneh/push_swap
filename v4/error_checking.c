@@ -14,6 +14,20 @@ int	ft_error(t_stacks *ptr_stacks)
 	return (1);
 }
 
+int	ft_isint(int argc, char **argv)
+{
+	int	nbr;
+	int	i;
+
+	i = 1;
+	while (i < argc)
+	{
+		if (ft_strlen(argv[i]) > 12)
+			return (1);
+		nbr = ft_atol(argv[i]);
+	}
+}
+
 int	ft_isnum(int argc, char **argv)
 {
 	int	i;
@@ -34,5 +48,7 @@ int	ft_isnum(int argc, char **argv)
 		}
 		i++;
 	}
+	if (ft_isint(argc, argv))
+		return (1)
 	return (0);
 }
