@@ -5,7 +5,8 @@ static int	ft_init(int argc, char **argv, t_stacks *ptr_stacks)
 	if (ft_isnum(argc, argv))
 		return (1);
 	ft_rank(argc, argv, ptr_stacks);
-	ptr_stacks->pos_a = 1;
+	if (ft_isdup(argc, ptr_stacks))
+		return (1);
 	return (0);
 }
 

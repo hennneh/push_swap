@@ -21,5 +21,6 @@ long	ft_atol(char *s);
 size_t	ft_strlen(const char *str);
 void	ft_rank(int argc, char **argv, t_stacks *ptr_stacks);
 int		ft_atoi(const char *nptr);
+int		ft_isdup(int argc, t_stacks *ptr_stacks);
 
 #endif

@@ -14,6 +14,20 @@ int	ft_error(t_stacks *ptr_stacks)
 	return (1);
 }
 
+int	ft_isdup(int argc, t_stacks *ptr_stacks)
+{
+	int	i;
+
+	i = 1;
+	while (i < (argc - 1))
+	{
+		if (ptr_stacks->stack_c[i - 1] == ptr_stacks->stack_c[i])
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 static int	ft_isint(int argc, char **argv)
 {
 	long	nbr;
