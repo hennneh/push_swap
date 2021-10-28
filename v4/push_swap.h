@@ -19,7 +19,6 @@ int		ft_isnum(int argc, char **argv);
 void	ft_free(t_stacks *ptr_stacks);
 long	ft_atol(char *s);
 size_t	ft_strlen(const char *str);
-void	ft_rank(int argc, char **argv, t_stacks *ptr_stacks);
 int		ft_atoi(const char *nptr);
 int		ft_isdup(int argc, t_stacks *ptr_stacks);
 

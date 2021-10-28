@@ -9,8 +9,7 @@ RM = rm -f
 
 SRCS = push_swap.c \
 	   error_checking.c \
-	   utils.c \
-	   rank.c
+	   utils.c
 
 OBJS = $(SRCS:.c=.o)
 
