@@ -19,7 +19,7 @@ void	ft_rank(int argc, char **argv, t_stacks *ptr_stacks)
 			temp = ptr_stacks->stack_c[i];
 			ptr_stacks->stack_c[i] = ptr_stacks->stack_c[i - 1];
 			ptr_stacks->stack_c[i - 1] = temp;
-			i = -1;
+			i = 0;
 		}
 		i++;
 	}

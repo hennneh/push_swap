@@ -19,7 +19,7 @@ int	ft_isdup(int argc, t_stacks *ptr_stacks)
 	int	i;
 
 	i = 1;
-	while (i < (argc - 1))
+	while (i < argc)
 	{
 		if (ptr_stacks->stack_c[i - 1] == ptr_stacks->stack_c[i])
 			return (1);
