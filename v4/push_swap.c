@@ -55,22 +55,6 @@ static int	ft_init(int argc, char **argv, t_stacks *ptr_stacks)
 	if (ft_isdup(argc, ptr_stacks))
 		return (1);
 	ft_transfer(argc, argv, ptr_stacks);
-// testing
-	int	j = 0;
-	printf("this is stack a\n\n");
-	while (j < (argc - 1))
-	{
-		printf("%d\n", ptr_stacks->stack_a[j]);
-		j++;
-	}
-	printf("\n\nand this is stack c\n\n");
-	j = 0;
-	while (j < (argc - 1))
-	{
-		printf("%d\n", ptr_stacks->stack_c[j]);
-		j++;
-	}
-// end of test
 	ptr_stacks->pos_a = argc - 1;
 	ptr_stacks->pos_b = 0;
 	return (0);
@@ -87,6 +71,7 @@ int	main(int argc, char **argv)
 	ptr_stacks->stack_c = malloc(sizeof(int) * (argc - 1));
 	if (ft_init(argc, argv, ptr_stacks))
 		return (ft_error(ptr_stacks));
+	ft_sort(ptr_stacks);
 /*	if (argc < 3)
 	{
 		ft_free(ptr_stacks);
