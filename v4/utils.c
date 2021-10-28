@@ -4,22 +4,22 @@ long	ft_atol(char *s)
 {
 	long	nbr;
 	int		i;
-//	int		sign;
+	int		sign;
 
 	nbr = 0;
 	i = 0;
-/*	sign = 1;
+	sign = 1;
 	if (s[i] == '-')
 	{
 		i++;
 		sign = -1;
-	}*/
+	}
 	while (s[i])
 	{
-		nbr = (nbr * 10) + (s[i] - 48);
+		nbr = nbr * 10 + s[i] - '0';
 		i++;
 	}
-	return (nbr/* * sign*/);
+	return (nbr * sign);
 }
 
 size_t	ft_strlen(const char *str)

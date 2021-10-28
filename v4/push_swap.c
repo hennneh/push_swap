@@ -30,14 +30,6 @@ static int	ft_init(int argc, char **argv, t_stacks *ptr_stacks)
 	if (ft_isdup(argc, ptr_stacks))
 		return (1);
 	ft_transfer(argc, argv, ptr_stacks);
-	// testing
-	int	i = 0;
-	while (i < (argc - 1))
-	{
-		printf("%d\n", ptr_stacks->stack_a[i]);
-		i++;
-	}
-	//end of test
 	ptr_stacks->pos_a = argc - 1;
 	ptr_stacks->pos_b = 0;
 	return (0);
