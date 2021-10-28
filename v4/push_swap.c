@@ -13,7 +13,7 @@ static void	ft_transfer(int argc, char **argv, t_stacks *ptr_stacks)
 		{
 			if (ft_atoi(argv[i]) == ptr_stacks->stack_c[j])
 			{
-				ptr_stacks->stack_a[i] = j;
+				ptr_stacks->stack_a[i - 1] = j;
 				break ;
 			}
 			j++;
