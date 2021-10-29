@@ -5,3 +5,5 @@ remove <stdio.h>
 why does it work for 1 input if I don't check for argc < 3?
 
 FIX NORM_ERRORS!!!
+
+check if all the operations are working properly

@@ -38,7 +38,7 @@ void	ft_sort_three(t_stacks *ptr_stacks)
 }
 
 void	ft_sort(t_stacks *ptr_stacks)
-{
+{/*
 // testing
 	printf("this is inside of sort.c\n");						//test
         int     j = 0;											//test
@@ -55,7 +55,7 @@ void	ft_sort(t_stacks *ptr_stacks)
                 printf("%d\n", ptr_stacks->stack_c[j]);			//test
                 j++;											//test
         }														//test
-// end of test
+// end of test */
 	if (ft_issorted(ptr_stacks))
 		return ;
 	if (ptr_stacks->pos_a == 3)
@@ -68,7 +68,7 @@ void	ft_sort(t_stacks *ptr_stacks)
 		ft_sort_fivehundred(ptr_stacks);						//not implemented
 	else														//not implemented
 		ft_sort_rest(ptr_stacks);*/								//not implemented
-	//another test												//test
+/*	//another test												//test
 	printf("and now the sorted array\n");						//test
 	j = 0;														//test
 	while (j < ptr_stacks->pos_a)								//test
@@ -76,5 +76,20 @@ void	ft_sort(t_stacks *ptr_stacks)
 		printf("%d\n", ptr_stacks->stack_a[j]);					//test
 			j++;												//test
 	}															//test
-	//end of test												//test
+	//end of test		*/										//test
+	printf("before sorting:.\n");
+	int	j = 0;
+	while (j < ptr_stacks->pos_a)
+	{
+		printf("%d\n", ptr_stacks->stack_a[j]);
+		j++;
+	}
+	ra(ptr_stacks);
+	j = 0;
+	printf("after ra\n");
+	while (j < ptr_stacks->pos_a)
+	{
+		printf("%d\n", ptr_stacks->stack_a[j]);
+		j++;
+	}
 }
