@@ -43,7 +43,7 @@ static int	ft_isint(int argc, char **argv)
 		nbr = ft_atol(argv[i]);
 		if (nbr > 2147483647 || nbr < -2147483648)
 			return (1);
-		return (0);
+		i++;
 	}
 	return (0);
 }
