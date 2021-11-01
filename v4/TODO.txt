@@ -7,3 +7,7 @@ why does it work for 1 input if I don't check for argc < 3?
 FIX NORM_ERRORS!!!
 
 check if all the operations are working properly
+
+fix is_int -> does not display error when >INT is not first parameter
+
+do I have to take single strings delimited by spaces as well????
