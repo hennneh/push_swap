@@ -1,3 +1,9 @@
+3 in 3
+5 in 12
+100 in 700, 900, 1100, 1300, 1500
+500 in 5500, 7000, 8500, 10000, 11500
+
+
 what if input is 0 or 1? -> can it still sort? -> kinda answered by line 7?!?!?
 
 remove <stdio.h>
