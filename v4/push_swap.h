@@ -36,5 +36,6 @@ void	rra(t_stacks *ptr_stacks);
 void	rrb(t_stacks *ptr_stacks);
 void	rrr(t_stacks *ptr_stacks);
 void	ft_sort_three(t_stacks *ptr_stacks);
+void	ft_sort_five(t_stacks *ptr_stacks);
 
 #endif

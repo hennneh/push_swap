@@ -63,9 +63,9 @@ void	ft_sort(t_stacks *ptr_stacks)
 		return ;
 	if (ptr_stacks->pos_a == 3)
 		ft_sort_three(ptr_stacks);
-/*	else if (ptr_stacks->pos_a == 5)							//not implemented
+	else if (ptr_stacks->pos_a == 5)							//not implemented
 		ft_sort_five(ptr_stacks);								//not implemented
-	else if (ptr_stacks->pos_a == 100)							//not implemented
+/*	else if (ptr_stacks->pos_a == 100)							//not implemented
 		ft_sort_hundred(ptr_stacks);							//not implemented
 	else if (ptr_stacks->pos_a == 500)							//not implemented
 		ft_sort_fivehundred(ptr_stacks);*/						//not implemented
