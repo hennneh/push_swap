@@ -69,6 +69,7 @@ int	main(int argc, char **argv)
 	ptr_stacks->stack_a = malloc(sizeof(int) * (argc - 1));
 	ptr_stacks->stack_b = malloc(sizeof(int) * (argc - 1));
 	ptr_stacks->stack_c = malloc(sizeof(int) * (argc - 1));
+	ptr_stacks->d = malloc(sizeof(int) * (argc - 1));
 	if (ft_init(argc, argv, ptr_stacks))
 		return (ft_error(ptr_stacks));
 	ft_sort(ptr_stacks);

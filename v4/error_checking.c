@@ -5,6 +5,7 @@ void	ft_free(t_stacks *ptr_stacks)
 	free(ptr_stacks->stack_a);
 	free(ptr_stacks->stack_b);
 	free(ptr_stacks->stack_c);
+	free(ptr_stacks->d);
 }
 
 int	ft_error(t_stacks *ptr_stacks)

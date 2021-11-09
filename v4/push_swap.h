@@ -10,6 +10,7 @@ typedef struct s_stacks
 	int	*stack_a;
 	int	*stack_b;
 	int	*stack_c;
+	int	*d;
 	int	pos_a;
 	int	pos_b;
 }		t_stacks;
