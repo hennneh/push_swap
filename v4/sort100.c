@@ -146,6 +146,32 @@ void	ft_back(t_stacks *ptr_stacks)
 	}
 }
 
+void	ft_top(t_stacks *ptr_stacks)
+{
+	int	pos;
+
+	pos = 0;
+	while (ptr_stacks->stack_a[pos] != 0)
+		pos++;
+	if (ptr_stacks->pos_a / 2 > pos)
+	{
+		while (pos > 0)
+		{
+			ra(ptr_stacks);
+			pos--;
+		}
+	}
+	else
+	{
+		pos = ptr_stacks->pos_a - pos;
+		while (pos > 0)
+		{
+			rra(ptr_stacks);
+			pos--;
+		}
+	}
+}
+
 void	ft_sort_hundred(t_stacks *ptr_stacks)
 {
 	int	i;
@@ -153,6 +179,7 @@ void	ft_sort_hundred(t_stacks *ptr_stacks)
 	i = ft_find_head(ptr_stacks);
 	ft_move(ptr_stacks);
 	ft_back(ptr_stacks);
+	ft_top(ptr_stacks);
 	//testing aölsdkjfaölskjdfölaksjdfölkj
 	i = 0;
 	while (i < ptr_stacks->pos_a)
