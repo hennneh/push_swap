@@ -93,17 +93,79 @@ static int	ft_find_head(t_stacks *ptr_stacks)
 	return (head);
 }
 
+void	ft_move(t_stacks *ptr_stacks)
+{
+	int	i;
+
+	i = 0;
+	while (i < ptr_stacks->pos_a)
+	{
+		if (ptr_stacks->d[ptr_stacks->stack_a[0]] == 0)
+			pb(ptr_stacks);
+		else
+			ra(ptr_stacks);
+		i++;
+	}
+}
+
+int	ft_find_pos(t_stacks *ptr_stacks)
+{
+	int	pos;
+
+	pos = 0;
+	while (ptr_stacks->stack_a[pos] != ptr_stacks->stack_b[0] - 1)
+		pos++;
+	return (pos + 1);
+}
+
+void	ft_back(t_stacks *ptr_stacks)
+{
+	int	pos;
+
+	while (ptr_stacks->pos_b != 0)
+	{
+		pos = ft_find_pos(ptr_stacks);
+		if (ptr_stacks->pos_a / 2 > pos)
+		{
+			while (pos > 0)
+			{
+				ra(ptr_stacks);
+				pos--;
+			}
+		}
+		else
+		{
+			pos = ptr_stacks->pos_a - pos;
+			while (pos > 0)
+			{
+				rra(ptr_stacks);
+				pos--;
+			}
+		}
+		pa(ptr_stacks);
+	}
+}
+
 void	ft_sort_hundred(t_stacks *ptr_stacks)
 {
 	int	i;
 
 	i = ft_find_head(ptr_stacks);
-	//TESTSETSETSETINGIGINIGNGINGIGNIGNGING
+	ft_move(ptr_stacks);
+	ft_back(ptr_stacks);
+	//testing aölsdkjfaölskjdfölaksjdfölkj
 	i = 0;
 	while (i < ptr_stacks->pos_a)
 	{
-		printf("#%d: %d\n", i, ptr_stacks->d[i]);
+		printf("%d\n", ptr_stacks->stack_a[i]);
 		i++;
 	}
-	//END OF TESTOINTOSINETOÖIENTOSIETNOSIENT
+	i = 0;
+	printf("\n\nand now the sorted stack_a\n\n");
+	while (i < ptr_stacks->pos_a)
+	{
+		printf("%d\n", ptr_stacks->stack_a[i]);
+		i++;
+	}
+	//test is over aslödkfjöalskdjfölaksjdf
 }
