@@ -38,6 +38,15 @@ void	rrb(t_stacks *ptr_stacks);
 void	rrr(t_stacks *ptr_stacks);
 void	ft_sort_three(t_stacks *ptr_stacks);
 void	ft_sort_five(t_stacks *ptr_stacks);
-void	ft_sort_hundred(t_stacks *ptr_stacks);
+void	ft_sort_all(t_stacks *ptr_stacks);
+void	ft_cnt(int *cnt, t_stacks *ptr_stacks, int head);
+void	ft_top(t_stacks *ptr_stacks);
+void	ft_back(t_stacks *ptr_stacks);
+int		ft_find_pos(t_stacks *ptr_stacks);
+void	ft_move(t_stacks *ptr_stacks);
+void	ft_hat(int *cnt, t_stacks *ptr_stacks, int head);
+void	ft_loop_back(t_stacks *ptr_stacks, int *head);
+void	ft_index(t_stacks *ptr_stacks, int head);
+int		ft_find_head(t_stacks *ptr_stacks);
 
 #endif

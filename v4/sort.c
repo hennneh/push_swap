@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-int	ft_issorted(t_stacks *ptr_stacks)
+int		ft_issorted(t_stacks *ptr_stacks)
 {
 	int	i;
 
@@ -20,7 +20,7 @@ int	ft_issorted(t_stacks *ptr_stacks)
 void	ft_sort_rest(t_stacks *ptr_stacks)
 {
 	int	i;
-	
+
 	i = 0;
 	while (1 <= ptr_stacks->pos_a)
 	{
@@ -59,19 +59,12 @@ void	ft_sort_three(t_stacks *ptr_stacks)
 
 void	ft_sort(t_stacks *ptr_stacks)
 {
-	//testing													//testing
-	printf("reached ft_sort\n");
-	//end of test
 	if (ft_issorted(ptr_stacks))
 		return ;
 	if (ptr_stacks->pos_a == 3)
 		ft_sort_three(ptr_stacks);
-	else if (ptr_stacks->pos_a == 5)							//not implemented
-		ft_sort_five(ptr_stacks);								//not implemented
-	else if (ptr_stacks->pos_a > 5)							//not implemented
-		ft_sort_hundred(ptr_stacks);							//not implemented
-/*	else if (ptr_stacks->pos_a == 500)							//not implemented
-		ft_sort_fivehundred(ptr_stacks);*/						//not implemented
+	else if (ptr_stacks->pos_a == 5)
+		ft_sort_five(ptr_stacks);
 	else
-		ft_sort_rest(ptr_stacks);
+		ft_sort_all(ptr_stacks);
 }

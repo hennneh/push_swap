@@ -20,7 +20,7 @@ static void	ft_sort_five_three_a(t_stacks *ptr_stacks)
 		ra(ptr_stacks);
 }
 
-void	ft_sort_five(t_stacks *ptr_stacks)
+void		ft_sort_five(t_stacks *ptr_stacks)
 {
 	while (ptr_stacks->pos_a > 3)
 	{
