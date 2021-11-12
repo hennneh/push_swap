@@ -60,6 +60,10 @@ static int	ft_init(int argc, char **argv, t_stacks *ptr_stacks)
 	return (0);
 }
 
+/*
+ * the main function that mallocs all arrays and calls the input-check and the sorting algorithms
+ */
+
 int	main(int argc, char **argv)
 {
 	t_stacks	stacks;
