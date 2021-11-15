@@ -9,7 +9,12 @@ RM = rm -f
 
 SRCS = push_swap.c \
 	   utils.c \
-	   error.c
+	   error.c \
+	   operations1.c \
+	   operations2.c \
+	   operations3.c \
+	   sort.c \
+	   sort_five.c
 
 OBJS = $(SRCS:.c=.o)
 

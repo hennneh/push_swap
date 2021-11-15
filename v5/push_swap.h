@@ -17,6 +17,18 @@ typedef struct s_s
 	int	hd;
 }	t_s;
 
+void	sa(t_s *ps);
+void	sb(t_s *ps);
+void	ss(t_s *ps);
+void	ss(t_s *ps);
+void	pa(t_s *ps);
+void	pb(t_s *ps);
+void	ra(t_s *ps);
+void	rb(t_s *ps);
+void	rr(t_s *ps);
+void	rra(t_s *ps);
+void	rrb(t_s *ps);
+void	rrr(t_s *ps);
 void	ft_free(t_s *ps);
 int		ft_error(t_s *ps);
 int		ft_isdup(int argc, t_s *ps);
@@ -25,5 +37,8 @@ int		ft_isnum(int argc, char **argv);
 long	ft_atol(char *s);
 size_t	ft_strlen(const char *str);
 int		ft_atoi(const char *nptr);
+void	ft_sort(t_s *ps);
+void	ft_sort_five(t_s *ps);
+int		ft_issorted(t_s *ps);
 
 #endif
