@@ -7,7 +7,9 @@ CFLAGS = -Wall -Werror -Wextra
 
 RM = rm -f
 
-SRCS = push_swap.c
+SRCS = push_swap.c \
+	   utils.c \
+	   error.c
 
 OBJS = $(SRCS:.c=.o)
 
