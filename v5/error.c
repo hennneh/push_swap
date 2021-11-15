@@ -10,6 +10,7 @@ void	ft_free(t_s *ps)
 	free(ps->b);
 	free(ps->c);
 	free(ps->d);
+	free(ps->e);
 }
 
 /* printing an error messaage and calling the free function on the stacks */

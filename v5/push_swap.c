@@ -83,5 +83,7 @@ int	main(int argc, char **argv)
 
 	if (ft_init(argc, argv, ps))
 		return (ft_error(ps));
+	ft_sort(ps);
+	ft_free(ps);
 	return (0);
 }
