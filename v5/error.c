@@ -14,7 +14,7 @@ void	ft_free(t_s *ps)
 
 /* printing an error messaage and calling the free function on the stacks */
 
-int		ft_error(t_s *ps)
+int	ft_error(t_s *ps)
 {
 	write(2, "Error\n", 6);
 	ft_free(ps);
@@ -25,7 +25,7 @@ int		ft_error(t_s *ps)
  * checking if there are duplicates
  */
 
-int		ft_isdup(int argc, t_s *ps)
+int	ft_isdup(int argc, t_s *ps)
 {
 	int	i;
 
@@ -44,7 +44,7 @@ int		ft_isdup(int argc, t_s *ps)
  * is within the range of an integer; if not an error is returned to
  * the caller function */
 
-int		ft_isint(int argc, char **argv)
+int	ft_isint(int argc, char **argv)
 {
 	long	nbr;
 	int		i;
@@ -74,7 +74,7 @@ int		ft_isint(int argc, char **argv)
  * consists of integeres
  */
 
-int		ft_isnum(int argc, char **argv)
+int	ft_isnum(int argc, char **argv)
 {
 	int	i;
 	int	j;
