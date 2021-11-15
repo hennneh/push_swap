@@ -90,13 +90,6 @@ void	ft_sort_all(t_stacks *ptr_stacks)
 
 	i = ft_find_head(ptr_stacks);
 	ft_move(ptr_stacks);
-	//tseting ölaksjfölaksjdfj
-	i = 0;
-	while (i < ptr_stacks->pos_a)
-	{
-		printf("%d\n", ptr_stacks->stack_a[i]);
-		i++;
-	}
 	ft_back(ptr_stacks);
 	ft_top(ptr_stacks);
 }

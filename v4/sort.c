@@ -67,11 +67,4 @@ void	ft_sort(t_stacks *ptr_stacks)
 		ft_sort_five(ptr_stacks);
 	else
 		ft_sort_all(ptr_stacks);
-	//testing aölksdjfölkasdjfölkajsdölfkjasöldkjföalskdjf
-	int	i = 0;
-	while (i < ptr_stacks->pos_a)
-	{
-		printf("%d\n", ptr_stacks->stack_a[i]);
-		i++;
-	}
 }
