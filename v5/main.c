@@ -14,6 +14,161 @@ typedef struct s_s
 	int	hd;
 }	t_s;
 
+long	ft_atol(char *s)
+{
+	long	nbr;
+	int		i;
+	int		sign;
+
+	nbr = 0;
+	i = 0;
+	sign = 1;
+	if (s[i] == '-')
+	{
+		i++;
+		sign = -1;
+	}
+	while (s[i])
+	{
+		nbr = nbr * 10 + s[i] - '0';
+		i++;
+	}
+	return (nbr * sign);
+}
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
+int	ft_atoi(const char *nptr)
+{
+	size_t	i;
+	int		sign;
+	int		num;
+
+	i = 0;
+	sign = 1;
+	num = 0;
+	while ((nptr[i] > 8 && nptr[i] < 14) || nptr[i] == 32)
+		i++;
+	if (nptr[i] == 43 || nptr[i] == 45)
+	{
+		if (nptr[i] == 45)
+			sign *= -1;
+		i++;
+	}
+	while (nptr[i] > 47 && nptr[i] < 58)
+	{
+		num = num * 10 + nptr[i] - '0';
+		i++;
+	}
+	return (num * sign);
+}
+
+/*
+ * freeing the stacks
+ */
+
+void	ft_free(t_s *ps)
+{
+	free(ps->a);
+	free(ps->b);
+	free(ps->c);
+	free(ps->d);
+}
+
+/*
+ * printing an error messaage and calling the free function on the stacks
+ */
+
+int	ft_error(t_s *ps)
+{
+	write(2, "Error\n", 6);
+	ft_free(ps);
+	return (1);
+}
+
+/*
+ * checking if there are duplicates 
+ */
+
+int	ft_isdup(int argc, t_s *ps)
+{
+	int	i;
+
+	i = 1;
+	while (i < argc)
+	{
+		if (ps->c[i - 1] == ps->c[i])
+				return (1);
+		i++;
+	}
+	return (0);
+}
+
+/*
+ * iterating through the input and replacing it with the position/rank it has in stack c
+ * while shifting it into stack a
+ */
+
+void	ft_transfer(int argc, char **argv, t_s *ps)
+{
+	int	i;
+	int	j;
+
+	i = 1;
+	while (i < argc)
+	{
+		j = 0;
+		while (j < (argc - 1))
+		{
+			if (ft_atoi(argv[i]) == ps->c[j])
+			{
+				ps->a[i - 1] = j;
+				break ;
+			}
+			j++;
+		}
+		i++;
+	}
+}
+
+/*
+ * iterating through every command line argument and putting it into stack c
+ * then sorting stack c with bubble sort
+ */
+
+void	ft_rank(int argc, char **argv, t_s *ps)
+{
+	int	i;
+	int	temp;
+
+	i = 1;
+	while (i < argc)
+	{
+		ps->c[i - 1] = ft_atoi(argv[i]);
+		i++;
+	}
+	i = 1;
+	while (i < (argc - 1))
+	{
+		if (ps->c[i - 1] > ps->c[i])
+		{
+			temp = ps->c[i];
+			ps->c[i] = ps->c[i - 1];
+			ps->c[i - 1] = temp;
+			i = 0;
+		}
+		i++;
+	}
+}
+
 /*
  * this function goes through every element of the command-line-arguments and checks if it
  * is within the range of an integer; if not an error is returned to the caller function
@@ -98,14 +253,14 @@ int	ft_init(int argc, char **argv, t_s *ps)
 int	main(int argc, char **argv)
 {
 	t_s	s;
-	t_s	ps;
+	t_s	*ps;
 
 	ps = &s;
-	s->a = malloc(sizeof(int) * (argc - 1));
-	s->b = malloc(sizeof(int) * (argc - 1));
-	s->c = malloc(sizeof(int) * (argc - 1));
-	s->d = malloc(sizeof(int) * (argc - 1));
-	s->e = malloc(sizeof(int) * (argc - 1));
+	ps->a = malloc(sizeof(int) * (argc - 1));
+	ps->b = malloc(sizeof(int) * (argc - 1));
+	ps->c = malloc(sizeof(int) * (argc - 1));
+	ps->d = malloc(sizeof(int) * (argc - 1));
+	ps->e = malloc(sizeof(int) * (argc - 1));
 
 	if (ft_init(argc, argv, ps))
 		return (ft_error(ps));
