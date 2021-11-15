@@ -1,8 +1,30 @@
-all:
-	gcc -Wall -Werror -Wextra main.c -o push_swap
+NAME = push_swap
+
+CC = gcc
+
+CFLAGS = -Wall -Werror -Wextra
+
+
+RM = rm -f
+
+SRCS = push_swap.c
+
+OBJS = $(SRCS:.c=.o)
+
+all: $(NAME)
+
+$(%.o): $(%.c)
+	$(CC) $(CFLAGS) -o $@ -c $^
+
+$(NAME): $(OBJS)
+	$(CC) -o $@ $(OBJS)
 
 clean:
-	rm -f *.o
+	$(RM) *.o
 
 fclean: clean
-	rm -f push_swap
+	$(RM) $(NAME)
+
+re: fclean all
+
+.PHONY: all bonus clean fclean re
