@@ -5,7 +5,7 @@ static void	ft_sort_five_three_a(t_s *ps)
 	if (ps->a[0] == 4 && ps->a[1] == 3)
 	{
 		ra(ps);
-		ra(ps);
+		sa(ps);
 	}
 	else if (ps->a[0] == 2 && ps->a[1] == 4)
 	{

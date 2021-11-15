@@ -22,7 +22,7 @@ void	ft_sort_three(t_s *ps)
 	if (ps->a[0] == 2 && ps->a[1] == 1)
 	{
 		ra(ps);
-		ra(ps);
+		sa(ps);
 	}
 	else if (ps->a[0] == 0 && ps->a[1] == 2)
 	{
