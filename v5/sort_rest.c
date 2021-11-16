@@ -1,5 +1,22 @@
 #include "push_swap.h"
 
+void	ft_move_labeled(t_s *ps)
+{
+	int	i;
+	int	j;
+
+	j = ps->pa;
+	i = 0;
+	while (i < j)
+	{
+		if (ps->e[ps->a[0]] == 0)
+			pb(ps);
+		else
+			ra(ps);
+		i++;
+	}
+}
+
 /*
  * the inner loop to finding the head
  * because norm doesn't allow more
@@ -92,6 +109,7 @@ void	ft_sort_rest(t_s *ps)
 	ft_find_head(ps);
 	ft_label(ps, 1, (ps->hd + 1), ps->hd);
 	ps->e[ps->a[ps->hd]] = 1;
+	ft_move_labeled(ps);
 //	ft_sort_back(ps);
 //	ft_rotate(ps);
 }
