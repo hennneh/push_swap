@@ -15,7 +15,8 @@ SRCS = push_swap.c \
 	   operations3.c \
 	   sort.c \
 	   sort_five.c \
-	   sort_rest.c
+	   sort_rest.c \
+	   sort_rest_two.c
 
 OBJS = $(SRCS:.c=.o)
 
