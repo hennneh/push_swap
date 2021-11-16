@@ -10,22 +10,8 @@
  * position, in stack a
  */
 
-void	ft_label(t_s *ps)
+void	ft_label(t_s *ps, int i, int j, int tmp)
 {
-	int	i;
-	int	j;
-	int	tmp;
-	int	z;	//öaslkdjfölskdjgfölskjdföglkjsdfölgkjslödfkgjölsdkjfgölsdkfjgölsdfkgjsdföglkj
-	i = 0;
-	while (i < ps->pa)
-	{
-		ps->e[i] = -1;
-		i++;
-	}
-	j = ps->hd + 1;
-	tmp = ps->hd;
-	i = 1;
-	ps->e[ps->a[ps->hd]] = 1;
 	while (i < ps->pa)
 	{
 		if (j == 0)
@@ -40,7 +26,6 @@ void	ft_label(t_s *ps)
 		}
 		else if (j == ps->pa)
 		{
-			printf("wir looooooooopen\n"); //öalskdjgölakjdgölakjsdölgjkasöldfkjaölsdkjfösalk
 			j = -1;
 			i--;
 		}
@@ -56,16 +41,6 @@ void	ft_label(t_s *ps)
 		}
 		i++;
 		j++;
-		//test aöslkdfjaölskdjfölaksjdfölakjsdfölkjasdölfkjasdölfkjasöldkfj
-		z = 0;
-		printf("head = %d\n", ps->hd);
-		printf("durchlauf #%d\n", i - 1);
-		while (z < ps->pa)
-		{
-			printf("#%d: %d\n", z, ps->e[z]);
-			z++;
-		}
-		//end of test alöskdfjöalskdjfölaskjdflökjasdlöfkjasöldkjfölaskjdfasöldfk
 	}
 }
 
@@ -159,7 +134,16 @@ void	ft_sort_rest(t_s *ps)
 {
 	ft_init_d(ps);
 	ft_find_head(ps);
-	ft_label(ps);
+	ft_label(ps, 1, (ps->hd + 1), ps->hd);
+	ps->e[ps->a[ps->hd]] = 1;
+	//test askjdfölaskdfjölaskjdfölaskjdfölaskjdfölkasjdfölkajsdöflkjasödlfkjasöldkfjöasldkjfölaskdjf
+	int	i = 0;
+	while (i < ps->pa)
+	{
+		printf("#%d: %d\n", i, ps->e[i]);
+		i++;
+	}
+	//end of test laöskdfjölaskdjflökajsdfölkjasdöfljksdölaksdjföalsdkfjöalsdkjfölaskjdflösakdfjsaöldfkj
 //	ft_sort_back(ps);
 //	ft_rotate(ps);
 }
