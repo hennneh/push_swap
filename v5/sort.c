@@ -1,5 +1,9 @@
 #include "push_swap.h"
 
+/*
+ * checking if stack a is sorted
+ */
+
 int		ft_issorted(t_s *ps)
 {
 	int	i;
@@ -16,6 +20,11 @@ int		ft_issorted(t_s *ps)
 	}
 	return (1);
 }
+
+/*
+ * hard coded solutions for all possible inputs
+ * with 3 numbers
+ */
 
 void	ft_sort_three(t_s *ps)
 {
@@ -36,6 +45,13 @@ void	ft_sort_three(t_s *ps)
 	else if (ps->a[0] == 2 && ps->a[1] == 0)
 		ra(ps);
 }
+
+/*
+ * checking if the input is sorted already and then
+ * checking the amount of input and determining 
+ * which sorting algorithm to use:
+ * sort3, sort5, or sort_rest
+ */
 
 void	ft_sort(t_s *ps)
 {

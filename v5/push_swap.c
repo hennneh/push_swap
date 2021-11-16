@@ -1,5 +1,10 @@
 #include "push_swap.h"
 
+/*
+ * putting the input numbers into stack a and replacing
+ * them with their calculated rank
+ */
+
 void	ft_transfer(int argc, char **argv, t_s *ps)
 {
 	int	i;

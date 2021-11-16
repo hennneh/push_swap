@@ -1,5 +1,11 @@
 #include "push_swap.h"
 
+/*
+ * hard coded solution for sort 3
+ * after two smallest ints have 
+ * been pushed to stack b already
+ */
+
 static void	ft_sort_five_three_a(t_s *ps)
 {
 	if (ps->a[0] == 4 && ps->a[1] == 3)
@@ -19,6 +25,14 @@ static void	ft_sort_five_three_a(t_s *ps)
 	else if (ps->a[0] == 4 && ps->a[1] == 2)
 		ra(ps);
 }
+
+/*
+ * algorithm to sort 5 inputs
+ * first pushing the two smallest ints
+ * onto stack b, then sorting stack a
+ * with sub-function and finally
+ * pushing back from stack b to a
+ */
 
 void		ft_sort_five(t_s *ps)
 {
