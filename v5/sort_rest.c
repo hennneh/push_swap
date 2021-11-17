@@ -116,6 +116,24 @@ void	ft_sort_rest(t_s *ps)
 	ft_label(ps, 1, (ps->hd + 1), ps->hd);
 	ps->e[ps->a[ps->hd]] = 1;
 	ft_move_labeled(ps);
+	/*
+	//testing alsdkjflaöskdjfölaskjdflöaksdjflkjsadölfkjsaöldkfjöaslkdfjasdfasdfasdfasdfasdf
+	int	i = 0;
+	printf("stack a\n");
+	while (i < ps->pa)
+	{
+		printf("%d\n", ps->a[i]);
+		i++;
+	}
+	i = 0;
+	printf("stack b\n");
+	while (i < ps->pb)
+	{
+		printf("%d\n", ps->b[i]);
+		i++;
+	}
+	// end of testing alsdkfjlöaskjdfölaksdjfölaksjdfölkajsdöflkjasdölfkjasöldkfjaölsdkjfölasdkjf
+	*/
 	ft_sort_back(ps);
 	ft_rotate(ps);
 }

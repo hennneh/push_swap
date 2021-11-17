@@ -1,6 +1,17 @@
 #include "push_swap.h"
 
 /*
+ * rotating stack a until smallest 
+ * element is at the top of stack a
+ */
+
+void	ft_rotate(t_s *ps)
+{
+	while (ps->a[0] != 0)
+		ra(ps);
+}
+
+/*
  * logic for if statement that
  * needs to be separated because
  * of norm issues for the function
