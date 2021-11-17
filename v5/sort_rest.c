@@ -1,5 +1,11 @@
 #include "push_swap.h"
 
+/*
+ * pushing every element of stack a
+ * that has been labeled with 0 
+ * onto stack b
+ */
+
 void	ft_move_labeled(t_s *ps)
 {
 	int	i;
@@ -110,6 +116,6 @@ void	ft_sort_rest(t_s *ps)
 	ft_label(ps, 1, (ps->hd + 1), ps->hd);
 	ps->e[ps->a[ps->hd]] = 1;
 	ft_move_labeled(ps);
-//	ft_sort_back(ps);
-//	ft_rotate(ps);
+	ft_sort_back(ps);
+	ft_rotate(ps);
 }

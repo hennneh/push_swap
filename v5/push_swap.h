@@ -42,5 +42,7 @@ void	ft_sort_five(t_s *ps);
 int		ft_issorted(t_s *ps);
 void	ft_sort_rest(t_s *ps);
 void	ft_label(t_s *ps, int i, int j, int tmp);
+void	ft_sort_back(t_s *ps);
+void	ft_rotate(t_s *ps);
 
 #endif
