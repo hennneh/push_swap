@@ -10,11 +10,8 @@ typedef struct s_s
 	int	*a;
 	int	*b;
 	int	*c;
-	int	*d;
-	int	*e;
 	int	pa;
 	int	pb;
-	int	hd;
 }	t_s;
 
 void	sa(t_s *ps);

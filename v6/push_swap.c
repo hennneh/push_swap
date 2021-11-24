@@ -83,8 +83,6 @@ int	main(int argc, char **argv)
 	ps->a = malloc(sizeof(int) * (argc - 1));
 	ps->b = malloc(sizeof(int) * (argc - 1));
 	ps->c = malloc(sizeof(int) * (argc - 1));
-	ps->d = malloc(sizeof(int) * (argc - 1));
-	ps->e = malloc(sizeof(int) * (argc - 1));
 
 	if (ft_init(argc, argv, ps))
 		return (ft_error(ps));
