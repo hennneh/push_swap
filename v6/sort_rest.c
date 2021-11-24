@@ -24,9 +24,9 @@ static int	ft_psh_hlf(t_s *ps, int srt)
 	}
 	mid = (max - min) / 2 + min;
 	i = 0;
-	while (i < srt && pshd < ((max - min) / 2))
+	while (i < srt && pshd <= ((max - min) / 2))
 	{
-		if (ps->a[0] < mid)
+		if (ps->a[0] <= mid)
 		{
 			pb(ps);
 			pshd++;
@@ -49,14 +49,48 @@ static int	ft_psh_hlf(t_s *ps, int srt)
 
 static void	ft_srt(t_s *ps, int srt)
 {
-
+	if (srt == 2 && ps->a[0] > ps->a[1])
+		sa(ps);
+	else if (srt == 3)
+	{
+		if (ps->a[0] > ps->a[1] && ps->a[1] < ps->a[2] && ps->a[0] < ps->a[2])
+			sa(ps);
+		else if (ps->a[0] > ps->a[1] && ps->a[1] < ps->a[2] && ps->a[0] > ps->a[2])
+		{
+			sa(ps);
+			ra(ps);
+			sa(ps);
+			rra(ps);
+		}
+		else if (ps->a[0] < ps->a[1] && ps->a[1] > ps->a[2] && ps->a[0] > ps->a[2])
+		{
+			ra(ps);
+			sa(ps);
+			rra(ps);
+			sa(ps);
+		}
+		else if (ps->a[0] < ps->a[1] && ps->a[1] > ps->a[2] && ps->a[0] < ps->a[2])
+		{
+			ra(ps);
+			sa(ps);
+			rra(ps);
+		}
+		else if (ps->a[0] > ps->a[1] && ps->a[1] > ps->a[2] && ps->a[0] > ps->a[2])
+		{
+			sa(ps);
+			ra(ps);
+			sa(ps);
+			rra(ps);
+			sa(ps);
+		}
+	}
 }
-
+/*
 static void ft_srt_bck(t_s *ps, int pshd)
 {
 
 }
-
+*/
 void	ft_sort_rest(t_s *ps, int srt)
 {
 	int	pshd;
@@ -69,6 +103,6 @@ void	ft_sort_rest(t_s *ps, int srt)
 	}	
 	else
 		ft_srt(ps, srt);
-	if (pshd > 0)
-		ft_srt_bck(ps, pshd);
+/*	if (pshd > 0)
+		ft_srt_bck(ps, pshd);*/
 }

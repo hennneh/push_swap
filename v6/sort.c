@@ -61,6 +61,6 @@ void	ft_sort(t_s *ps)
 		ft_sort_three(ps);
 	else if (ps->pa == 5)
 		ft_sort_five(ps);
-/*	else
-		ft_sort_rest(ps);*/
+	else
+		ft_sort_rest(ps, ps->pa);
 }

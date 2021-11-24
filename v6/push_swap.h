@@ -37,5 +37,6 @@ int		ft_atoi(const char *nptr);
 void	ft_sort(t_s *ps);
 void	ft_sort_five(t_s *ps);
 int		ft_issorted(t_s *ps);
+void	ft_sort_rest(t_s *ps, int srt);
 
 #endif
