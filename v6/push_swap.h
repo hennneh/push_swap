@@ -60,6 +60,6 @@ void	ft_thronetwo(t_s *ps);
 void	ft_onetwothr(t_s *ps);
 void	ft_srt(t_s *ps, int srt);
 int		ft_psh_bck_hlf(t_s *ps, int pshd);
-
+int		ft_psh_hlf(t_s *ps, int srt);
 
 #endif
