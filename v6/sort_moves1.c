@@ -13,6 +13,7 @@ void	ft_onethrtwo(t_s *ps)
 	pa(ps);
 	sb(ps);
 	pa(ps);
+	pa(ps);
 }
 
 void	ft_twothrone(t_s *ps)
