@@ -23,6 +23,9 @@ typedef struct s_s
 	int	*c;
 	int	pa;
 	int	pb;
+	int	mn;
+	int	mx;
+	int	md;
 }	t_s;
 
 void	sa(t_s *ps);
@@ -56,5 +59,7 @@ void	ft_twoonethr(t_s *ps);
 void	ft_thronetwo(t_s *ps);
 void	ft_onetwothr(t_s *ps);
 void	ft_srt(t_s *ps, int srt);
+int		ft_psh_bck_hlf(t_s *ps, int pshd);
+
 
 #endif
