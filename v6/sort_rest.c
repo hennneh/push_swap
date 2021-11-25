@@ -20,6 +20,7 @@ static int	ft_psh_bck_hlf(t_s *ps, int pshd)
 			max = ps->b[i];
 		if (ps->b[i] < min)
 			min = ps->b[i];
+		i++;
 	}
 	mid = (max - min) / 2 + min;
 	i = 0;
@@ -167,7 +168,7 @@ static void	ft_bck_srt(t_s *ps, int pshd)
 		}
 	}
 	else if (pshd == 3)
-		ft_bck_srt_three(ps)
+		ft_bck_srt_three(ps);
 }
 
 static void ft_srt_bck(t_s *ps, int pshd)
