@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hlehmann <hlehmann@student.42wolfsburg.de  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/25 16:07:37 by hlehmann          #+#    #+#             */
+/*   Updated: 2021/11/25 16:07:43 by hlehmann         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
@@ -83,7 +95,6 @@ int	main(int argc, char **argv)
 	ps->a = malloc(sizeof(int) * (argc - 1));
 	ps->b = malloc(sizeof(int) * (argc - 1));
 	ps->c = malloc(sizeof(int) * (argc - 1));
-
 	if (ft_init(argc, argv, ps))
 		return (ft_error(ps));
 	ft_sort(ps);

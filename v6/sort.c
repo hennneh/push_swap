@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hlehmann <hlehmann@student.42wolfsburg.de  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/25 16:08:04 by hlehmann          #+#    #+#             */
+/*   Updated: 2021/11/25 16:09:28 by hlehmann         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
  * checking if stack a is sorted
  */
 
-int		ft_issorted(t_s *ps)
+int	ft_issorted(t_s *ps)
 {
 	int	i;
 
@@ -63,19 +75,4 @@ void	ft_sort(t_s *ps)
 		ft_sort_five(ps);
 	else
 		ft_sort_rest(ps, ps->pa);
-	// testing lsökfjöalskdfjölaskjdfölaskjdfölaskjdfölaksjdfölaksjdfölkasjfdölkasjdfölkasjdfölkasjdfölkajsdfölkajsödflkjas
-/*	int i = 0;
-	while (i < ps->pa)
-	{
-		printf("#%d: %d\n", i, ps->a[i]);
-		i++;
-	}
-	printf("stack b is: \n\n");
-	i = 0;
-	while (i < ps->pb)
-	{
-		printf("%d\n", ps->b[i]);
-		i++;
-	}*/
-	//end of tet aslödkfjölaskdjfölaskjdfölaskjdfölakjsdölfkjasöldkfjöalskdjfölaksjdfölaksjdfölaksjdfölaksjdfölaskjdfasdf
 }

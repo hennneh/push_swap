@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_five.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hlehmann <hlehmann@student.42wolfsburg.de  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/25 16:08:24 by hlehmann          #+#    #+#             */
+/*   Updated: 2021/11/25 16:09:42 by hlehmann         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
@@ -34,7 +46,7 @@ static void	ft_sort_five_three_a(t_s *ps)
  * pushing back from stack b to a
  */
 
-void		ft_sort_five(t_s *ps)
+void	ft_sort_five(t_s *ps)
 {
 	while (ps->pa > 3)
 	{
