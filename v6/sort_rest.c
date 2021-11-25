@@ -1,5 +1,51 @@
 #include "push_swap.h"
 
+static int	ft_psh_bck_hlf(t_s *ps, int pshd)
+{
+	int	rt;
+	int	min;
+	int	max;
+	int	i;
+	int	srt;
+	int	mid;
+
+	rt = 0;
+	srt = 0;
+	i = 0;
+	min = ps->b[0];
+	max = ps->b[0];
+	while (i < pshd)
+	{
+		if (ps->b[i] > max)
+			max = ps->b[i];
+		if (ps->b[i] < min)
+			min = ps->b[i];
+	}
+	mid = (max - min) / 2 + min;
+	i = 0;
+	while (i < pshd && srt <= ((max - min) / 2))
+	{
+		if (ps->b[0] >= mid)
+		{
+			pa(ps);
+			srt++;
+		}
+		else
+		{
+			rb(ps);
+			rt++;
+		}
+		i++;
+	}
+	i = 0;
+	while (i < rt)
+	{
+		rrb(ps);
+		i++;
+	}
+	return (srt);
+}
+
 static int	ft_psh_hlf(t_s *ps, int srt)
 {
 	int	rt;
@@ -84,11 +130,6 @@ static void	ft_srt(t_s *ps, int srt)
 			sa(ps);
 		}
 	}
-}
-
-static int	ft_psh_bck_hlf(t_s *ps, int pshd)
-{
-// need to write this function to push back half of the to be sorted elements on top of b to a !!!!!!!!!!!!!!!!!!!!!!!!!
 }
 
 static void	ft_bck_srt_three(t_s *ps)

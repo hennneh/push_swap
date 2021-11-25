@@ -38,5 +38,11 @@ void	ft_sort(t_s *ps);
 void	ft_sort_five(t_s *ps);
 int		ft_issorted(t_s *ps);
 void	ft_sort_rest(t_s *ps, int srt);
+void	ft_thrtwoone(t_s *ps);
+void	ft_onethrtwo(t_s *ps);
+void	ft_twothrone(t_s *ps);
+void	ft_twoonethr(t_s *ps);
+void	ft_thronetwo(t_s *ps);
+void	ft_onetwothr(t_s *ps);
 
 #endif
