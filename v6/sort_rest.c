@@ -6,7 +6,7 @@
 /*   By: hlehmann <hlehmann@student.42wolfsburg.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 16:08:50 by hlehmann          #+#    #+#             */
-/*   Updated: 2021/11/25 16:08:53 by hlehmann         ###   ########.fr       */
+/*   Updated: 2021/11/25 16:26:17 by hlehmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,27 +114,31 @@ static void	ft_srt(t_s *ps, int srt)
 	{
 		if (ps->a[0] > ps->a[1] && ps->a[1] < ps->a[2] && ps->a[0] < ps->a[2])
 			sa(ps);
-		else if (ps->a[0] > ps->a[1] && ps->a[1] < ps->a[2] && ps->a[0] > ps->a[2])
+		else if (ps->a[0] > ps->a[1] && ps->a[1] < ps->a[2]
+			&& ps->a[0] > ps->a[2])
 		{
 			sa(ps);
 			ra(ps);
 			sa(ps);
 			rra(ps);
 		}
-		else if (ps->a[0] < ps->a[1] && ps->a[1] > ps->a[2] && ps->a[0] > ps->a[2])
+		else if (ps->a[0] < ps->a[1] && ps->a[1] > ps->a[2]
+			&& ps->a[0] > ps->a[2])
 		{
 			ra(ps);
 			sa(ps);
 			rra(ps);
 			sa(ps);
 		}
-		else if (ps->a[0] < ps->a[1] && ps->a[1] > ps->a[2] && ps->a[0] < ps->a[2])
+		else if (ps->a[0] < ps->a[1] && ps->a[1] > ps->a[2]
+			&& ps->a[0] < ps->a[2])
 		{
 			ra(ps);
 			sa(ps);
 			rra(ps);
 		}
-		else if (ps->a[0] > ps->a[1] && ps->a[1] > ps->a[2] && ps->a[0] > ps->a[2])
+		else if (ps->a[0] > ps->a[1] && ps->a[1] > ps->a[2]
+			&& ps->a[0] > ps->a[2])
 		{
 			sa(ps);
 			ra(ps);
@@ -183,7 +187,7 @@ static void	ft_bck_srt(t_s *ps, int pshd)
 		ft_bck_srt_three(ps);
 }
 
-static void ft_srt_bck(t_s *ps, int pshd)
+static void	ft_srt_bck(t_s *ps, int pshd)
 {
 	int	srt;
 
