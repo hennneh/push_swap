@@ -64,7 +64,7 @@ void	ft_sort(t_s *ps)
 	else
 		ft_sort_rest(ps, ps->pa);
 	// testing lsökfjöalskdfjölaskjdfölaskjdfölaskjdfölaksjdfölaksjdfölkasjfdölkasjdfölkasjdfölkasjdfölkajsdfölkajsödflkjas
-	int i = 0;
+/*	int i = 0;
 	while (i < ps->pa)
 	{
 		printf("#%d: %d\n", i, ps->a[i]);
@@ -76,6 +76,6 @@ void	ft_sort(t_s *ps)
 	{
 		printf("%d\n", ps->b[i]);
 		i++;
-	}
+	}*/
 	//end of tet aslödkfjölaskdjfölaskjdfölaskjdfölakjsdölfkjasöldkfjöalskdjfölaksjdfölaksjdfölaksjdfölaksjdfölaskjdfasdf
 }

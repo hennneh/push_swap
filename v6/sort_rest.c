@@ -26,7 +26,7 @@ static int	ft_psh_bck_hlf(t_s *ps, int pshd)
 	i = 0;
 	while (i < pshd && srt <= ((max - min) / 2))
 	{
-		if (ps->b[0] >= mid)
+		if (ps->b[0] > mid)
 		{
 			pa(ps);
 			srt++;
