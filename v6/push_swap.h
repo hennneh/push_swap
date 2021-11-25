@@ -6,14 +6,13 @@
 /*   By: hlehmann <hlehmann@student.42wolfsburg.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 16:07:49 by hlehmann          #+#    #+#             */
-/*   Updated: 2021/11/25 16:07:53 by hlehmann         ###   ########.fr       */
+/*   Updated: 2021/11/25 16:41:53 by hlehmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <stdio.h> //NEEDS TO BE REMOVED AÖLSDKJFALÖSKDJFÖALSKJDFÖLKAJSDÖFLKJASDÖLFKJAÖSLDKJFÖALSDKJF
 # include <unistd.h>
 # include <stdlib.h>
 
@@ -56,5 +55,6 @@ void	ft_twothrone(t_s *ps);
 void	ft_twoonethr(t_s *ps);
 void	ft_thronetwo(t_s *ps);
 void	ft_onetwothr(t_s *ps);
+void	ft_srt(t_s *ps, int srt);
 
 #endif
