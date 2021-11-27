@@ -56,7 +56,8 @@ void	ft_sort_five(t_s *ps)
 			if (ps->pa == 3)
 				break ;
 		}
-		ra(ps);
+		else
+			ra(ps);
 	}
 	if (ps->b[0] == 0)
 		rb(ps);
