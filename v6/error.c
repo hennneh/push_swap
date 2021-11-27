@@ -41,7 +41,7 @@ int	ft_isdup(int argc, t_s *ps)
 	int	i;
 
 	i = 1;
-	while (i < argc)
+	while (i < argc - 1)
 	{
 		if (ps->c[i - 1] == ps->c[i])
 			return (1);

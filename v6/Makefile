@@ -37,14 +37,11 @@ OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(%.o): $(%.c)
-	$(CC) $(CFLAGS) -o $@ -c $^
-
 $(NAME): $(OBJS)
 	$(CC) -o $@ $(OBJS)
 
 clean:
-	$(RM) *.o
+	$(RM) $(OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
